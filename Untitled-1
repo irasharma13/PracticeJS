@@ -1,0 +1,10 @@
+<html>
+<script>
+    function demo() {
+        document.write("just clicked");
+    }
+</script>
+<h3 onmouseout="demo()">Click</h3>
+
+</html>
+

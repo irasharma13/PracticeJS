@@ -1,0 +1,21 @@
+<html>
+<script>
+    // Asynchronous - does not wait 
+    function callback(myCallback, yourCallback) {
+        document.write("First ");
+        myCallback();
+        yourCallback();
+    }
+
+    document.write("Second ");
+
+    callback(function() {
+            document.write("MyCallback function");
+        },
+        function() {
+            document.write("Your Callback function");
+        });
+    document.write("Third ");
+</script>
+
+</html>

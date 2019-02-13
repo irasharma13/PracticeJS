@@ -1,0 +1,18 @@
+<html>
+
+<script>
+    var a = function() {
+        document.write("timeout <br>");
+    };
+    var b = 5000;
+
+    function myfunction() {
+        setTimeout(a, b);
+    }
+    myfunction();
+    myfunction();
+
+    document.write("Working on it");
+</script>
+
+</html>

@@ -1,0 +1,107 @@
+<html>
+<link rel="stylesheet" type="text/css" href="Signup.css">
+<link rel="script" type="text/javascript" href="signupjs.html">
+
+<h1 align="center">Sign Up Form</h1>
+<div class="signup">
+    <label><b>Name</b></label><br>
+    <input type="text" id="name" placeholder="Name">
+    <br>
+    <br>
+    <label><b>Username</b></label><br>
+    <input type="text" id="username" placeholder="Username">
+    <br>
+    <br>
+    <label><b>Password</b></label><br>
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <br>
+    <label><b>Mobile</b></label><br>
+    <input type="text" id="mobile" placeholder="Mobile">
+    <br>
+    <br>
+    <label><b>Hobbies</b></label>
+    <input type="checkbox" id="hobbies[]" name="reading" placeholder="Mobile"> Reading
+    <input type="checkbox" id="hobbies[]" name="writing" placeholder="Mobile"> Writing
+    <input type="checkbox" id="hobbies[]" name="cricket" placeholder="Mobile"> Cricket
+    <br>
+    <br>
+    <label><b>Gender</b></label>
+    <input type="radio" id="gender" placeholder="Mobile"> Male
+    <input type="radio" id="gender" placeholder="Mobile"> Female
+    <br>
+    <br>
+    <label><b>Address</b></label>
+    <input type="texts" id="address" placeholder="Address">
+    <br>
+    <br>
+    <label><b>Country</b></label>
+    <select>
+            <option>Australia</option>
+            <option>India</option>
+            <option>UAE</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            
+    </select>
+    <br>
+    <br><br>
+    <br>
+    <button onclick="validate()">Submit</button> <button>Cancel</button>
+
+</div>
+
+<script>
+    //var u = document.getElementById("Username");
+    //var p = document.getElementById("Password");
+    function validate() {
+        /*getElementsByClassName
+        getElementsByTagName
+        getElementsByName
+        */
+        var n = document.getElementById("name").value;
+        var u = document.getElementById("username").value;
+        var p = document.getElementById("password").value;
+        var m = document.getElementById("mobile").value;
+        var a = document.getElementById("address").value;
+        var rejexletters = /^[ a-zA-Z]+$/;
+        var rejecxnumb = /^[ 0-9]+$/;
+        /*
+                if ((n == "") || (u == "") || (p == "") || (m == "") || (a == "")) {
+                    alert("Please fill all the forms");
+                }
+
+                if (n.length >= 20) {
+                    alert(" Name is too long ");
+                }
+                if (u.length >= 20) {
+                    alert(" Username is too long ");
+                }
+                if (p.length >= 20) {
+                    alert(" Password is too long ");
+                }
+                */
+
+        if (rejexletters.test(n) == false) {
+            alert("Name must be in alphabets only");
+            return false;
+        }
+        if (rejecxnumb.test(m) == false) {
+            alert("Mobile must be in numbers only");
+            return false;
+        }
+    }
+    /*if (u == [!@# $ % ^ & * ]) {
+        alert("Username should not contain special characters")
+    }
+
+    /*
+            [a - z]
+            [A - Z]
+            p + = finds string with p one or more than 1
+            p ? = finds string with atmost one p
+
+    */
+</script>
+
+</html>
